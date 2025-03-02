@@ -1,0 +1,126 @@
+:root {
+    --light-bg: linear-gradient(120deg, #d3d3d3, #a8a8a8, #808080);
+    --dark-bg: linear-gradient(to right, #1b1b1b, #2c2c2c);
+    --light-text: #000;
+    --dark-text: #fff;
+    --card-bg: #fff;
+    --card-dark-bg: #333;
+    --border: #ddd;
+    --border-dark: #444;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: var(--light-bg);
+    color: var(--light-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    transition: 0.5s, color 0.5s;
+  }
+  
+  .dark-mode {
+    background: var(--dark-bg);
+    color: var(--dark-text);
+  }
+  
+  .wrapper {
+    width: 90%;
+    max-width: 1100px;
+  }
+  
+  .user-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .user-card {
+    display: flex;
+    align-items: center;
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 12px 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    min-width: 260px;
+    flex: 1 1 calc(33.333% - 30px);
+  }
+  
+  .dark-mode .user-card {
+    background: var(--card-dark-bg);
+    border: 1px solid var(--border-dark);
+  }
+  
+  .user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid var(--border);
+  }
+  
+  .dark-mode .avatar {
+    border-color: var(--border-dark);
+  }
+  
+  .user-info h3 {
+    margin: 0;
+    font-size: 16px;
+    color: var(--light-text);
+  }
+  
+  .dark-mode .user-info h3 {
+    color: var(--dark-text);
+  }
+  
+  .user-info p {
+    margin: 2px 0;
+    font-size: 14px;
+  }
+  
+  .user-info a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .user-info a:hover {
+    text-decoration: underline;
+  }
+  
+  #toggleTheme {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: white;
+    color: black;
+    transition: 0.3s;
+    margin-bottom: 20px;
+  }
+  
+  .dark-mode #toggleTheme {
+    background: black;
+    color: white;
+  }
+  
+  #toggleTheme:hover {
+    background: black;
+    color: white;
+  }
+  
+  .dark-mode #toggleTheme:hover {
+    background: white;
+    color: black;
+  }
+  
